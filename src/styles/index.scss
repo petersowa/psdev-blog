@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Raleway|Source+Sans+Pro|Alegreya+Sans|Frank+Ruhl+Libre&display=swap");
+
+:root {
+  --clr-dark: #576384;
+  --clr-mid: #4790f9;
+  --clr-h-light: #f6f9ff;
+  --clr-light: #eee8a9;
+}
+
+html {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  font-family: "Raleway", "Montserrat", "Source Sans Pro", "Noto Sans",
+    sans-serif;
+  font-size: 16px;
+}
+
+body {
+  color: var(--clr-light);
+}
+
+.main__header {
+  background-color: var(--clr-mid);
+  padding: 1em;
+  margin-bottom: 1em;
+
+  &__title {
+    margin: 0;
+
+    &__link {
+      text-decoration: none;
+      color: var(--clr-h-light);
+    }
+  }
+}
