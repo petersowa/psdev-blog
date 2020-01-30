@@ -128,3 +128,22 @@ a {
         // column-fill: auto;
     }
 }
+
+.md-post {
+    h1 {
+        margin-bottom: 0.5em;
+        font-weight: 900;
+        border-bottom: 3px solid goldenrod;
+    }
+    a {
+        background: inherit;
+        margin: 0 0 0 1rem;
+        padding: 0;
+        &:hover {
+            border-bottom: 1px solid var(--clr-h-light);
+        }
+    }
+    li {
+        margin-bottom: 0.5em;
+    }
+}

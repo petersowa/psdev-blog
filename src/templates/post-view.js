@@ -10,12 +10,16 @@ export default ({ data }) => {
     return (
         <Layout>
             <SEO title={post.frontmatter.title} />
-            <Link to="/blog">Go Back</Link>
-            <h1>{post.frontmatter.title}</h1>
+
+            <div
+                className="md-post"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+            <hr />
             <h4>
                 Posted by {post.frontmatter.author} on {post.frontmatter.date}
             </h4>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Link to="/blog">Go Back</Link>
         </Layout>
     );
 };
