@@ -28,10 +28,15 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <Menu></Menu>
-            <div>
-                <main className="main">{children}</main>
+            <div className="v-container">
+                <Header siteTitle={data.site.siteMetadata.title} />
+                <Menu></Menu>
+
+                <div className="container">
+                    <aside className="sidebar sidebar--left"></aside>
+                    <main className="main">{children}</main>
+                    <aside className="sidebar sidebar--right"></aside>
+                </div>
                 <footer className="main__footer">
                     © {new Date().getFullYear()} by{' '}
                     {data.site.siteMetadata.author}, Built with
