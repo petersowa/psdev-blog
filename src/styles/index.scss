@@ -1,35 +1,88 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Raleway|Source+Sans+Pro|Alegreya+Sans|Frank+Ruhl+Libre&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Raleway|Source+Sans+Pro|Alegreya+Sans|Frank+Ruhl+Libre&display=swap');
 
 :root {
-  --clr-dark: #576384;
-  --clr-mid: #4790f9;
-  --clr-h-light: #f6f9ff;
-  --clr-light: #eee8a9;
+    --clr-dark: #293864;
+    --clr-mid: #648cf6;
+    --clr-h-light: #f6f8ff;
+    --clr-light: #f1f1e6;
+    --clr-menu-link: #648cf6;
 }
 
 html {
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
-  font-family: "Raleway", "Montserrat", "Source Sans Pro", "Noto Sans",
-    sans-serif;
-  font-size: 16px;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-family: 'Raleway', 'Montserrat', 'Source Sans Pro', 'Noto Sans',
+        sans-serif;
+    font-size: 16px;
 }
 
 body {
-  color: var(--clr-light);
+    color: var(--clr-light);
 }
 
-.main__header {
-  background-color: var(--clr-mid);
-  padding: 1em;
-  margin-bottom: 1em;
+a {
+    text-decoration: none;
+    color: var(--clr-h-light);
+    background-color: var(--clr-mid);
+}
 
-  &__title {
-    margin: 0;
+.main-header {
+    background-color: var(--clr-mid);
+    padding: 0.2em 0;
+    width: 100%;
 
-    &__link {
-      text-decoration: none;
-      color: var(--clr-h-light);
+    &__logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__image {
+            display: inline-block;
+            max-width: 2.5em;
+            max-height: 2.5em;
+            margin: 0 0.5em;
+            padding: 0.2em;
+        }
+        &__title {
+            text-transform: capitalize;
+        }
     }
-  }
+}
+
+.main__footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: var(--clr-mid);
+    padding: 0.2rem 0.5rem;
+    opacity: 0.9;
+}
+
+.main__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 2rem;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    border-bottom: 5px solid var(--clr-mid);
+    margin-bottom: 1em;
+    &__item {
+        &__link {
+            text-transform: capitalize;
+            background: inherit;
+            color: var(--clr-menu-link);
+            &:hover {
+                outline: 2px solid red;
+            }
+            &.active {
+                outline: 2px solid blue;
+            }
+        }
+    }
+}
+
+.main {
+    margin: 0 1em 2em;
 }
