@@ -2,19 +2,20 @@
 
 :root {
     --clr-dark: hsl(205, 50%, 19%);
-    --clr-mid: hsl(205, 89%, 48%);
+    --clr-mid: hsl(205, 90%, 50%);
     --clr-h-light: hsl(227, 100%, 98%);
     --clr-light: hsl(40, 28%, 82%);
     --clr-menu-link: hsl(224, 89%, 38%);
     --clr-sidebar: hsl(205, 50%, 29%);
+    --clr-article: hsl(55, 30%, 80%);
+    --clr-heading: hsl(55, 30%, 60%);
 }
 
 html {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    font-family: 'Raleway', 'Montserrat', 'Source Sans Pro', 'Noto Sans',
+    font-family: 'Noto Sans', 'Source Sans Pro', 'Montserrat', 'Raleway',
         sans-serif;
-    font-size: 16px;
 }
 
 body {
@@ -32,6 +33,24 @@ a {
     flex-grow: 1;
     flex-basis: 100%;
     max-width: 60rem;
+
+    p,
+    h1,
+    h4,
+    h3 {
+        color: var(--clr-heading);
+    }
+
+    p {
+        color: var(--clr-article);
+        line-height: 1.5rem;
+    }
+
+    h1 {
+        padding: 0;
+        border-bottom: 3px solid var(--clr-h-light);
+        margin-bottom: 1em;
+    }
 
     &-header {
         background-color: var(--clr-mid);
