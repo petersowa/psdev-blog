@@ -1,25 +1,27 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import logo from '../images/logo.svg';
 
 const Header = ({ siteTitle }) => (
-  <header className="main__header">
-    <div>
-      <h1 className="main__header__title">
-        <Link className="main__header__title__link" to="/">
-          {siteTitle}
+    <header className="main-header">
+        <Link className="main-header__logo" to="/">
+            <img
+                className="main-header__logo__image"
+                src={logo}
+                alt={siteTitle}
+            />
+            <h1 className="main-header__logo__title">{siteTitle}</h1>
         </Link>
-      </h1>
-    </div>
-  </header>
-)
+    </header>
+);
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+    siteTitle: PropTypes.string,
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+    siteTitle: ``,
+};
 
-export default Header
+export default Header;
