@@ -1,7 +1,7 @@
 ---
 title: "Developer Links"
 date: "2020-01-30"
-path: "/post-dev-links"
+path: "post-dev-links"
 author: "devspeter"
 ---
 
@@ -15,6 +15,7 @@ author: "devspeter"
 - Tools
 	- [Color Theme Generator - mycolor.space](https://mycolor.space/)
 - Jobs
+	- [RegEx Tool - IHateRegex](https://ihateregex.io/)
 	- [Dev.to: Top websites to find a remote programming job in 2020](https://dev.to/fredmaiaarantes/top-websites-to-find-a-remote-programming-job-in-2020-4b54)
 - Boss CSS Tricks
 	- [Full Width Containers in Limited Width Parents](https://css-tricks.com/full-width-containers-limited-width-parents/)
