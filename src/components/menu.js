@@ -21,20 +21,18 @@ export default function Menu() {
     ]);
     console.log(menuItems);
     return (
-        <div>
-            <ul className="main__menu">
-                {menuItems.map(item => (
-                    <li className="main__menu__item" key={item.id}>
-                        <Link
-                            className="main__menu__item__link"
-                            activeClassName="active"
-                            to={item.path}
-                        >
-                            {item.text}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <ul className="main__menu">
+            {menuItems.map(item => (
+                <li className="main__menu__item" key={item.id}>
+                    <Link
+                        className="main__menu__item__link"
+                        activeClassName="active"
+                        to={item.path}
+                    >
+                        {item.text}
+                    </Link>
+                </li>
+            ))}
+        </ul>
     );
 }
