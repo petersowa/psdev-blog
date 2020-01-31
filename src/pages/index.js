@@ -2,11 +2,38 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import starsImage from '../images/astronomy-stars.jpg';
+// import starsImage from '../images/astronomy-stars.jpg';
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
     const [delayShow, setShow] = React.useState(false);
+    const starsImage = useStaticQuery(graphql`
+        query MyQuery {
+            file(relativePath: { eq: "astronomy-stars.jpg" }) {
+                id
+                childImageSharp {
+                    fluid {
+                        aspectRatio
+                        base64
+                        sizes
+                        src
+                        srcSet
+                    }
+                }
+            }
+            markdownRemark(frontmatter: { path: { eq: "post-dev-links" } }) {
+                html
+                frontmatter {
+                    author
+                    date
+                    path
+                    title
+                }
+            }
+        }
+    `);
     React.useEffect(() => {
         setTimeout(() => {
             setShow(true);
@@ -27,10 +54,15 @@ const IndexPage = () => {
             >
                 <img
                     className="cover-image"
-                    src={starsImage}
+                    src={starsImage.file.childImageSharp.fluid.src}
+                    srcSet={starsImage.file.childImageSharp.fluid.srcSet}
                     alt="milkyway on horizon"
                 ></img>
             </div>
+            <article
+                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            />
+            {/* <pre>{JSON.stringify(starsImage, null, 2)}</pre> */}
             <p className="article article-columns">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
                 repellendus corrupti sunt autem praesentium unde, officiis
