@@ -10,6 +10,7 @@ export default ({ data }) => {
     return (
         <Layout>
             <SEO title={post.frontmatter.title} />
+            <h1>{post.frontmatter.title}</h1>
 
             <div
                 className="md-post"
@@ -19,7 +20,9 @@ export default ({ data }) => {
             <h4>
                 Posted by {post.frontmatter.author} on {post.frontmatter.date}
             </h4>
-            <Link to="/blog">Go Back</Link>
+            <Link class="blog__entry__link" to="/blog">
+                Go Back
+            </Link>
         </Layout>
     );
 };

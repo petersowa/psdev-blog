@@ -11,17 +11,23 @@ export default ({ data }) => {
     return (
         <Layout>
             <SEO title="Blog" />
-            <div>
-                <h1>Amazing Pandas Eating Things</h1>
-                <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+            <div className="blog">
+                <h1 className="blog__heading">
+                    {data.allMarkdownRemark.totalCount} Posts
+                </h1>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id}>
-                        <h3>
+                    <div className="blog__entry" key={node.id}>
+                        <h2 className="blog__entry__title">
                             {node.frontmatter.title}{' '}
                             <span>— {node.frontmatter.date}</span>
-                        </h3>
-                        <p>{node.excerpt}</p>
-                        <Link to={node.frontmatter.path}>See more...</Link>
+                        </h2>
+                        <p className="blog__entry__excerpt">{node.excerpt}</p>
+                        <Link
+                            className="blog__entry__link"
+                            to={node.frontmatter.path}
+                        >
+                            See more...
+                        </Link>
                         {/* <div dangerouslySetInnerHTML={{ __html: node.html }} /> */}
                     </div>
                 ))}
