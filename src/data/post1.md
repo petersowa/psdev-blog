@@ -1,8 +1,8 @@
 ---
 title: "First Post Title"
-date: "2017-08-23"
+date: "2020-01-20"
 path: "/post_1"
-author: "rsp"
+author: "devspeter"
 ---
 
 # First Post
