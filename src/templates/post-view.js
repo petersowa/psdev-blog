@@ -8,19 +8,19 @@ export default ({ data }) => {
     console.log(data);
     const post = data.markdownRemark;
     return (
-        <Layout>
+        <Layout className="post-template">
             <SEO title={post.frontmatter.title} />
-            <h1>{post.frontmatter.title}</h1>
+            <h1 className="post-template__title">{post.frontmatter.title}</h1>
 
             <div
-                className="md-post"
+                className="post-template__content"
                 dangerouslySetInnerHTML={{ __html: post.html }}
             />
             <hr />
-            <h4>
+            <h4 className="post-template__citation">
                 Posted by {post.frontmatter.author} on {post.frontmatter.date}
             </h4>
-            <Link class="blog__entry__link" to="/blog">
+            <Link className="post-template__link" to="/blog">
                 Go Back
             </Link>
         </Layout>

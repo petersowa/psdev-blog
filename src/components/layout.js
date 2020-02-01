@@ -27,24 +27,25 @@ const Layout = ({ children }) => {
     `);
 
     return (
-        <>
-            <div className="v-container">
-                <Header siteTitle={data.site.siteMetadata.title} />
-                <Menu></Menu>
+        <div className="layout">
+            <Header
+                className="layout__header"
+                siteTitle={data.site.siteMetadata.title}
+            />
+            <Menu className="layout__menu"></Menu>
 
-                <div className="container">
-                    <aside className="sidebar sidebar--left"></aside>
-                    <main className="main">{children}</main>
-                    <aside className="sidebar sidebar--right"></aside>
-                </div>
-                <footer className="main__footer">
-                    © {new Date().getFullYear()} by{' '}
-                    {data.site.siteMetadata.author}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
+            <div className="layout__body">
+                <aside className="layout__sidebar layout__sidebar--left"></aside>
+                <main className="layout__content">{children}</main>
+                <aside className="layout__sidebar layout__sidebar--right"></aside>
             </div>
-        </>
+            <footer className="layout__footer">
+                © {new Date().getFullYear()} by {data.site.siteMetadata.author},
+                Built with
+                {` `}
+                <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </footer>
+        </div>
     );
 };
 

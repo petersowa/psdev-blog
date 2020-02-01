@@ -60,6 +60,7 @@ const IndexPage = ({ data }) => {
                 ></img>
             </div>
             <article
+                className="post-template__content"
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
             {/* <pre>{JSON.stringify(starsImage, null, 2)}</pre> */}

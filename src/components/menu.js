@@ -21,12 +21,12 @@ export default function Menu() {
     ]);
     console.log(menuItems);
     return (
-        <ul className="main__menu">
+        <ul className="menu">
             {menuItems.map(item => (
-                <li className="main__menu__item" key={item.id}>
+                <li className="menu__item" key={item.id}>
                     <Link
-                        className="main__menu__item__link"
-                        activeClassName="active"
+                        className="menu__link"
+                        activeClassName="menu__link--active"
                         to={item.path}
                     >
                         {item.text}

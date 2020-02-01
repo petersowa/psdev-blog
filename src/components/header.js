@@ -4,14 +4,10 @@ import React from 'react';
 import logo from '../images/logo.svg';
 
 const Header = ({ siteTitle }) => (
-    <header className="main-header">
-        <Link className="main-header__logo" to="/">
-            <img
-                className="main-header__logo__image"
-                src={logo}
-                alt={siteTitle}
-            />
-            <h1 className="main-header__logo__title">{siteTitle}</h1>
+    <header className="header">
+        <Link className="header__link" to="/">
+            <img className="header__logo" src={logo} alt={siteTitle} />
+            <h1 className="header__title">{siteTitle}</h1>
         </Link>
     </header>
 );
