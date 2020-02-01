@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import Img from 'gatsby-image';
+import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
 // import starsImage from '../images/astronomy-stars.jpg';
@@ -15,11 +15,7 @@ const IndexPage = ({ data }) => {
                 id
                 childImageSharp {
                     fluid {
-                        aspectRatio
-                        base64
-                        sizes
-                        src
-                        srcSet
+                        ...GatsbyImageSharpFluid_withWebp
                     }
                 }
             }
@@ -52,12 +48,11 @@ const IndexPage = ({ data }) => {
                     'cover-container shadow ' + (delayShow ? 'show' : 'hide')
                 }
             >
-                <img
+                <Img
                     className="cover-image"
-                    src={starsImage.file.childImageSharp.fluid.src}
-                    srcSet={starsImage.file.childImageSharp.fluid.srcSet}
+                    fluid={starsImage.file.childImageSharp.fluid}
                     alt="milkyway on horizon"
-                ></img>
+                ></Img>
             </div>
             <article
                 className="post-template__content"
