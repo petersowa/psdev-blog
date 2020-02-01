@@ -37,6 +37,7 @@ a {
 
     &__sidebar {
         background: var(--clr-sidebar);
+        padding-top: 0.5em;
         &--left {
             flex-basis: 8rem;
             flex-grow: 1;
@@ -48,10 +49,12 @@ a {
     }
 
     &__content {
-        margin: 0 1em 2em;
+        margin: 0;
+        padding: 0.5em;
         flex-grow: 2;
         flex-basis: 100%;
         max-width: 80rem;
+        border: 2px solid black;
     }
 
     &__body {
@@ -186,22 +189,6 @@ a {
     }
 }
 
-@media (max-width: 480px) {
-    .layout__body {
-        flex-direction: column;
-    }
-    .layout__sidebar {
-        display: none;
-    }
-    .menu {
-        flex-direction: column;
-        height: fit-content;
-        &__item {
-            padding: 0.2rem;
-        }
-    }
-}
-
 .article {
     padding: 0 0 1rem;
     &-columns {
@@ -255,19 +242,6 @@ a {
     box-shadow: 5px 8px 10px 5px var(--clr-shadow);
 }
 
-.cover-container {
-    position: relative;
-    background: black;
-    width: 80vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -40vw;
-    margin-right: -40vw;
-    margin-bottom: 1.5em;
-    margin-top: 0.5em;
-}
-
 .show {
     transition: opacity 1ms ease;
     opacity: 1;
@@ -277,14 +251,24 @@ a {
     opacity: 0;
 }
 
+.cover-container {
+    position: relative;
+    width: 80vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -40vw;
+    margin-right: -40vw;
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+}
+
 .cover-image {
-    object-fit: cover !important;
+    object-fit: cover;
     position: relative;
     vertical-align: middle;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 200px;
+    height: 20vh;
 }
 
 .iframe__video {
@@ -299,4 +283,20 @@ a {
     margin-bottom: 1.5em;
     margin-top: 0.5em;
     min-height: 500px;
+}
+
+@media (max-width: 480px) {
+    .layout__body {
+        flex-direction: column;
+    }
+    .layout__sidebar {
+        display: none;
+    }
+    .menu {
+        flex-direction: column;
+        height: fit-content;
+        &__item {
+            padding: 0.2rem;
+        }
+    }
 }
