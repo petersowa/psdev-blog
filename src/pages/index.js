@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
 // import starsImage from '../images/astronomy-stars.jpg';
