@@ -18,10 +18,15 @@ export default function Menu() {
             text: 'about',
             path: '/about',
         },
+        {
+            id: 4,
+            text: 'contact',
+            path: '/contact',
+        },
     ]);
     console.log(menuItems);
     return (
-        <ul className="menu">
+        <ul className="menu shadow">
             {menuItems.map(item => (
                 <li className="menu__item" key={item.id}>
                     <Link
