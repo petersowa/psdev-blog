@@ -11,6 +11,7 @@
     --clr-heading: hsl(55, 30%, 60%);
     --clr-shadow: hsla(0, 0%, 0%, 0.5);
     --clr-nav-active: hsl(205, 50%, 29%);
+    --clr-nav-outline: hsl(35, 90%, 80%);
 }
 
 html {
@@ -195,6 +196,35 @@ a {
         margin-top: 0;
         column-width: 20rem;
         // column-fill: auto;
+    }
+}
+
+button,
+input,
+textarea,
+a {
+    border-radius: 4px;
+    margin: 4px 0;
+    &:focus {
+        box-shadow: 0 0 0px 2px var(--clr-nav-active),
+            0 0 0px 4px var(--clr-nav-outline);
+    }
+    &::-moz-focus-inner {
+        border: none;
+    }
+}
+
+.contact {
+    &__group {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        border-radius: 5px;
+    }
+    &__submit {
+        text-decoration: none;
+        border: none;
+        background: none;
     }
 }
 
