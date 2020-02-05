@@ -10,7 +10,9 @@ export default ({ data }) => {
     return (
         <Layout className="post-template">
             <SEO title={post.frontmatter.title} />
-            <h1 className="post-template__title">{post.frontmatter.title}</h1>
+            <h1 className="post-template__title heading">
+                {post.frontmatter.title}
+            </h1>
 
             <div
                 className="post-template__content"
