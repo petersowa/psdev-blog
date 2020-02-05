@@ -54,31 +54,42 @@ const IndexPage = ({ data }) => {
                     alt="milkyway on horizon"
                 ></Img>
             </div>
-            <article
+            <section
                 className="post-template__content"
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
             {/* <pre>{JSON.stringify(starsImage, null, 2)}</pre> */}
-            <p className="article article-columns">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                repellendus corrupti sunt autem praesentium unde, officiis
-                tempore eveniet corporis incidunt amet eaque fuga. Ipsum nam
-                odio iusto consectetur natus commodi!Incidunt reprehenderit,
-                enim expedita voluptatum laboriosam quidem debitis ipsum. Neque
-                quae, accusamus nemo, quasi magni quaerat eius aut consectetur
-                necessitatibus vitae perspiciatis rerum commodi error distinctio
-                quisquam quis voluptas. Reiciendis.
-            </p>
-            <p className="article article-columns">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                repellendus corrupti sunt autem praesentium unde, officiis
-                tempore eveniet corporis incidunt amet eaque fuga. Ipsum nam
-                odio iusto consectetur natus commodi!Incidunt reprehenderit,
-                enim expedita voluptatum laboriosam quidem debitis ipsum. Neque
-                quae, accusamus nemo, quasi magni quaerat eius aut consectetur
-                necessitatibus vitae perspiciatis rerum commodi error distinctio
-                quisquam quis voluptas. Reiciendis.
-            </p>
+            <article className="article-columns">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Porro repellendus corrupti sunt autem praesentium unde,
+                    officiis tempore eveniet corporis incidunt amet eaque fuga.
+                    Ipsum nam odio iusto consectetur natus commodi!Incidunt
+                    reprehenderit, enim expedita voluptatum laboriosam quidem
+                    debitis ipsum. Neque quae, accusamus nemo, quasi magni
+                    quaerat eius aut consectetur necessitatibus vitae
+                    perspiciatis rerum commodi error distinctio quisquam quis
+                    voluptas. Reiciendis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Porro repellendus corrupti sunt autem praesentium unde,
+                    officiis tempore eveniet corporis incidunt amet eaque fuga.
+                    Ipsum nam odio iusto consectetur natus commodi!Incidunt
+                    reprehenderit, enim expedita voluptatum laboriosam quidem
+                    debitis ipsum. Neque quae, accusamus nemo, quasi magni
+                    quaerat eius aut consectetur necessitatibus vitae
+                    perspiciatis rerum commodi error distinctio quisquam quis
+                    voluptas. Reiciendis.
+                </p>
+                <h1>Useful package for Gatsby and Remark</h1>
+                <p>
+                    gatsby-remark-external-links Adds the target and rel
+                    attributes to external links in markdown. This is a gatsby
+                    port of the remark-external-links remark plugin.
+                </p>
+                https://cnpmjs.org/package/gatsby-remark-external-links
+            </article>
         </Layout>
     );
 };

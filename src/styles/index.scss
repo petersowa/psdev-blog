@@ -254,8 +254,15 @@ a {
     padding: 0 0 1rem;
     &-columns {
         margin-top: 0;
+
         column-width: 20rem;
+        column-count: 2;
+        column-rule: 1px dotted var(--clr-light);
+        column-gap: 2rem;
         // column-fill: auto;
+        p {
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -292,7 +299,12 @@ a {
 
 .post-template {
     &__content {
-        margin: 1em;
+        margin: 1em 0;
+        padding: 1em;
+        background: linear-gradient(#8883, #4443, #8883);
+        // background-blend-mode: hue;
+        border-radius: 4px;
+        box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.2);
 
         h1 {
             margin-bottom: 0.5em;
@@ -300,14 +312,23 @@ a {
             border-bottom: 3px solid goldenrod;
         }
 
-        li {
+        ul {
+            margin-bottom: 1em;
+        }
+
+        p {
             margin-bottom: 0.5em;
+        }
+
+        li {
+            margin-bottom: 0.2em;
         }
 
         a {
             background: inherit;
             margin: 1rem 0 0 1rem;
             padding: 0;
+            border-radius: 0;
             &:hover {
                 border-bottom: 2px solid var(--clr-h-light);
             }
