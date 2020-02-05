@@ -12,7 +12,7 @@ export default ({ data }) => {
         <Layout>
             <SEO title="Blog" />
             <div className="blog">
-                <h1 className="blog__heading">
+                <h1 className="blog__heading heading">
                     {data.allMarkdownRemark.totalCount} Posts
                 </h1>
                 {data.allMarkdownRemark.edges.map(({ node }) => (

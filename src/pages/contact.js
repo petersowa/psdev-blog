@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 const ContactPage = () => (
     <Layout>
         <SEO title="Contact" />
-        <h1>Get in touch...</h1>
+        <h1 className="heading">Get in touch...</h1>
 
         <form
             className="contact"
@@ -15,7 +15,7 @@ const ContactPage = () => (
         >
             <div className="contact__group shadow">
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" id="name" required autoFocus />
+                <input type="text" name="name" id="name" required />
                 <label htmlFor="email">Email</label>
                 <input type="email" name="_replyto" id="email" required />
                 <label htmlFor="message">Message</label>
