@@ -36,9 +36,8 @@ img {
     height: auto;
 }
 
-button {
-    font-size: inherit;
-}
-input {
+button,
+input,
+textarea {
     font-size: inherit;
 }

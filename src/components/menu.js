@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 export default function Menu() {
+    const [showMenu, toggleMenu] = React.useState(false);
     const [menuItems] = React.useState([
         {
             id: 1,
@@ -26,18 +27,27 @@ export default function Menu() {
     ]);
     console.log(menuItems);
     return (
-        <ul className="menu shadow">
-            {menuItems.map(item => (
-                <li className="menu__item" key={item.id}>
-                    <Link
-                        className="menu__link"
-                        activeClassName="menu__link--active"
-                        to={item.path}
-                    >
-                        {item.text}
-                    </Link>
-                </li>
-            ))}
-        </ul>
+        <>
+            <button
+                className="menu__toggle"
+                type="button"
+                onClick={() => {
+                    toggleMenu(!showMenu);
+                }}
+            ></button>
+            <ul className={`menu shadow ${showMenu ? '' : ' menu--hide'}`}>
+                {menuItems.map(item => (
+                    <li className="menu__item" key={item.id}>
+                        <Link
+                            className="menu__link"
+                            activeClassName="menu__link--active"
+                            to={item.path}
+                        >
+                            {item.text}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </>
     );
 }
