@@ -7,9 +7,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 // import starsImage from '../images/astronomy-stars.jpg';
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
     const [delayShow, setShow] = React.useState(false);
-    const starsImage = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
         query MyQuery {
             file(relativePath: { eq: "astronomy-stars.jpg" }) {
                 id
@@ -20,16 +20,36 @@ const IndexPage = ({ data }) => {
                 }
             }
             markdownRemark(frontmatter: { path: { eq: "post-dev-links" } }) {
-                html
                 frontmatter {
-                    author
-                    date
                     path
+                    date
+                    author
                     title
+                }
+                html
+            }
+
+            allContentfulBlogPosts(sort: { fields: createdAt, order: ASC }) {
+                edges {
+                    node {
+                        title
+                        updatedAt(formatString: "MM/DD/YYYY H:MMa")
+                        createdAt(formatString: "MM/DD/YYYY H:MMa")
+                        author
+                        id
+                        body {
+                            childMarkdownRemark {
+                                html
+                                excerpt
+                            }
+                        }
+                        slug
+                    }
                 }
             }
         }
     `);
+
     React.useEffect(() => {
         setTimeout(() => {
             setShow(true);
@@ -50,15 +70,44 @@ const IndexPage = ({ data }) => {
             >
                 <Img
                     className="cover-image"
-                    fluid={starsImage.file.childImageSharp.fluid}
+                    fluid={data.file.childImageSharp.fluid}
                     alt="milkyway on horizon"
                 ></Img>
             </div>
+            <section>
+                {data.allContentfulBlogPosts.edges.map(({ node }) => {
+                    return (
+                        <article key={node.id} className="front-article">
+                            <h1 className="front-article__title">
+                                {node.title}
+                            </h1>
+                            <div
+                                className="front-article__body"
+                                dangerouslySetInnerHTML={{
+                                    __html: node.body.childMarkdownRemark.html,
+                                }}
+                            ></div>
+                            <div className="front-article__meta">
+                                <h6 className="front-article__meta-field">
+                                    Author: {node.author}
+                                </h6>
+                                <h6 className="front-article__meta-field">
+                                    Created: {node.createdAt}
+                                </h6>
+                                <h6 className="front-article__meta-field">
+                                    Updated: {node.updatedAt}
+                                </h6>
+                            </div>
+                        </article>
+                    );
+                })}
+            </section>
             <section
                 className="post-template__content"
-                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+                dangerouslySetInnerHTML={{
+                    __html: data.markdownRemark.html,
+                }}
             />
-            {/* <pre>{JSON.stringify(starsImage, null, 2)}</pre> */}
             <article className="article-columns">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
