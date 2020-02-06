@@ -25,7 +25,6 @@ export default function Menu() {
             path: '/contact',
         },
     ]);
-    console.log(menuItems);
     return (
         <>
             <button
