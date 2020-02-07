@@ -3,14 +3,14 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const SecondPage = () => (
+const AboutPage = () => (
     <Layout>
         <SEO title="About" />
-        <h1 className="heading">About Page</h1>
+        <h1 className="heading">About Me</h1>
         <article className="article-columns">
             <p>
                 I am a web developer. Working on mostly on front end UI/UX dev.
-                I also have exprience working with back end dev tools such as
+                I also have experience working with back end dev tools such as
                 Express.js.
             </p>
             <p>
@@ -48,4 +48,4 @@ const SecondPage = () => (
     </Layout>
 );
 
-export default SecondPage;
+export default AboutPage;

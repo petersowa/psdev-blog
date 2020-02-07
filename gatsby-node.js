@@ -32,7 +32,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
     if (result.data) {
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-            console.log(JSON.stringify(node, null, 2));
+            // console.log(JSON.stringify(node, null, 2));
             if (node.frontmatter.path) {
                 createPage({
                     path: node.frontmatter.path,
