@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "psdev-blog",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "0.2.0",
+  "author": "Peter Sowa <devspeter@granitecode.com>",
   "dependencies": {
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -18,7 +18,7 @@
     "gatsby-source-contentful": "^2.1.85",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-remark": "^2.6.48",
-    "gatsby-transformer-sharp": "^2.3.13",
+    "gatsby-transformer-sharp": "^2.3.14",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

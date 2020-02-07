@@ -1,26 +1,14 @@
 import React from 'react';
-import { Router, Redirect } from '@reach/router';
 import Layout from '../components/layout';
-// import Profile from "../components/Profile"
-// import Details from "../components/Details"
-// import Login from "../components/Login"
-import Default from '../components/Default';
-import Random from '../modules/test';
+import SEO from '../components/seo';
+import MainRouter from '../components/MainRouter';
 
-const App = () => {
+export default function app() {
     return (
         <Layout>
-            <Router>
-                {/* <Profile path="/app/profile" />
-        <Details path="/app/details" />
-        <Login path="/app/login" /> */}
-                <Default path="/app" />
-                <Random path="/app/random" />
-                <Random path="/app/random2" />
-                <Redirect noThrow default to="/404" />
-            </Router>
+            <SEO title="Apps" />
+            <h1 className="heading">Apps</h1>
+            <MainRouter></MainRouter>
         </Layout>
     );
-};
-
-export default App;
+}
