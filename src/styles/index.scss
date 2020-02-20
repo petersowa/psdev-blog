@@ -401,11 +401,21 @@ textarea {
         }
 
         a {
+            position: relative;
             background: inherit;
-            margin: 1rem 0 0 1rem;
+            // margin: 1rem 0 0 1rem;
             padding: 0;
-            &:hover {
-                border-bottom: 2px solid var(--clr-h-light);
+            z-index: 1;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                background-color: var(--clr-mid);
+                border-radius: 2px;
+                height: 3px;
+                left: 0;
+                bottom: -2px;
+                z-index: -1;
             }
         }
     }
