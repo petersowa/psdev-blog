@@ -29,6 +29,7 @@ export default function Menu() {
         <>
             <button
                 className="menu__toggle"
+                aria-label="navigation menu toggle"
                 type="button"
                 onClick={() => {
                     toggleMenu(!showMenu);
