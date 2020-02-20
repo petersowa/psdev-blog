@@ -343,7 +343,7 @@ a {
     padding: 4px;
     &:focus,
     &:hover {
-        box-shadow: 0 0 0px 2px var(--clr-nav-active),
+        box-shadow: 0 0 0px 2px var(--clr-article),
             0 0 0px 4px var(--clr-nav-outline);
     }
     &::-moz-focus-inner {
@@ -507,9 +507,6 @@ textarea {
             background: inherit;
             margin: 1rem 0 0 1rem;
             padding: 0;
-            &:hover {
-                border-bottom: 2px solid var(--clr-h-light);
-            }
         }
     }
 }
