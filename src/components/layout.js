@@ -43,7 +43,12 @@ const Layout = ({ children }) => {
                 © {new Date().getFullYear()} by {data.site.siteMetadata.author},
                 Built with
                 {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
+                <a
+                    className="layout__footer__link"
+                    href="https://www.gatsbyjs.org"
+                >
+                    Gatsby
+                </a>
             </footer>
         </div>
     );

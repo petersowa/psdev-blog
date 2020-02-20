@@ -7,7 +7,7 @@ const AboutPage = () => (
     <Layout>
         <SEO title="About" />
         <h1 className="heading">About Me</h1>
-        <article className="article-columns">
+        <article className="article article-columns">
             <p>
                 I am a web developer. Working on mostly on front end UI/UX dev.
                 I also have experience working with back end dev tools such as

@@ -100,7 +100,7 @@ const IndexPage = () => {
         <Layout>
             <SEO title="Home" />
             <h1 className="heading">Latest News</h1>
-            <OverflowImage fluid={data.file.childImageSharp.fluid} />
+            {/* <OverflowImage fluid={data.file.childImageSharp.fluid} /> */}
 
             <section>
                 {data.allContentfulBlogPosts.edges.map(({ node }) => (

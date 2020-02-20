@@ -13,7 +13,7 @@ const ContactPage = () => (
             action="https://formspree.io/xvoarpvq"
             method="POST"
         >
-            <div className="contact__group shadow">
+            <div className="contact__group">
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" id="name" required />
                 <label htmlFor="email">Email</label>

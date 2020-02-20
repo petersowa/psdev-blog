@@ -34,7 +34,7 @@ export default function Menu() {
                     toggleMenu(!showMenu);
                 }}
             ></button>
-            <ul className={`menu shadow ${showMenu ? '' : ' menu--hide'}`}>
+            <ul className={`menu  ${showMenu ? '' : ' menu--hide'}`}>
                 {menuItems.map(item => (
                     <li className="menu__item" key={item.id}>
                         <Link

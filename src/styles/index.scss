@@ -1,34 +1,65 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Raleway|Source+Sans+Pro|Alegreya+Sans|Frank+Ruhl+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro|Alegreya+Sans|Frank+Ruhl+Libre|Arvo|Audiowide|Coda&display=swap');
 
 :root {
     --clr-dark: hsl(205, 50%, 19%);
-    --clr-mid: hsl(205, 90%, 50%);
+    --clr-mid: hsl(205, 90%, 30%);
     --clr-h-light: hsl(227, 100%, 98%);
-    --clr-light: hsl(40, 28%, 82%);
+    --clr-light: hsl(25, 88%, 95%);
     --clr-menu-link: hsl(224, 89%, 38%);
-    --clr-sidebar: hsl(205, 50%, 29%);
+    --clr-sidebar: hsl(205, 50%, 25%);
+    --clr-main: hsl(205, 20%, 50%);
     --clr-article: hsl(55, 30%, 80%);
     --clr-heading: hsl(55, 30%, 60%);
     --clr-shadow: hsla(0, 0%, 0%, 0.5);
     --clr-nav-active: hsl(205, 50%, 29%);
     --clr-nav-outline: hsl(35, 90%, 80%);
+    --clr-bg-text: hsl(205, 30%, 30%);
+    --clr-content-bg: hsl(205, 50%, 15%);
+    --clr-input-bg: hsl(55, 30%, 90%);
+}
+
+$radius-inner: 4px;
+$background-gradient: linear-gradient(#8883, #4443, #8883);
+$header-fonts: 'Coda', 'Frank Ruhl Libre', serif;
+$text-fonts: 'Alegreya Sans', 'Raleway', 'Source Sans Pro', 'Montserrat',
+    'Noto Sans', sans-serif;
+$title-fonts: 'Coda', 'Audiowide', 'Frank Ruhl Libre', serif;
+
+@mixin shadow-main {
+    box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+@mixin content {
+    margin: 0;
+    // background: $background-gradient;
+    background: var(--clr-content-bg);
+    margin-bottom: 1em;
+    padding: 1em 1em;
+    border-radius: $radius-inner;
+    @include shadow-main;
 }
 
 html {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    font-family: 'Noto Sans', 'Source Sans Pro', 'Montserrat', 'Raleway',
-        sans-serif;
+    font-family: $text-fonts;
 }
 
 body {
     color: var(--clr-light);
+    line-height: 1.5;
+    // font-size: 100%;
 }
 
 a {
     text-decoration: none;
     color: var(--clr-h-light);
     background-color: var(--clr-mid);
+}
+
+h1,
+h2 {
+    font-family: $header-fonts;
 }
 
 .layout {
@@ -50,12 +81,14 @@ a {
     }
 
     &__content {
-        margin: 0;
-        padding: 0.5em;
+        // @include content;
         flex-grow: 2;
         flex-basis: 100%;
-        max-width: 80rem;
-        border: 2px solid black;
+        max-width: 60rem;
+        // border: 2px solid black;
+        padding: 0.5em 0.5em;
+        // border-radius: $radius-inner;
+        background: var(--clr-main);
     }
 
     &__body {
@@ -73,27 +106,38 @@ a {
         opacity: 0.9;
         font-size: 0.8rem;
         border-radius: 8px 0 0 0;
+        &__link {
+            // height: 1rem;
+            // background: red;
+            padding: 0;
+        }
     }
 }
 
 @mixin link-hover {
     &:hover {
         filter: brightness(1.2);
-        box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+        // box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
     }
 }
 
 .header {
+    display: flex;
     background-color: var(--clr-mid);
     padding: 0.2em 0;
     width: 100%;
+    font-family: $header-fonts;
+    outline: 1px solid red;
+    align-items: center;
+    // height: 10rem;
+    // justify-content: center;
 
     &__link {
         display: flex;
         flex-direction: row;
         align-items: center;
         width: fit-content;
-        margin-left: 0.4em;
+        margin: 0 0 0.4em;
         @include link-hover;
     }
 
@@ -108,9 +152,10 @@ a {
     &__title {
         display: block;
         text-transform: capitalize;
+        font-family: $title-fonts;
         margin: 0;
         word-break: none;
-        width: 15rem;
+        width: 20rem;
     }
 }
 
@@ -181,9 +226,12 @@ a {
 .heading {
     margin-bottom: 0.5em;
     background: var(--clr-mid);
-    border-radius: 4px;
+    border-radius: $radius-inner;
     padding: 0 0.4em;
-    box-shadow: inset 0 0 5px var(--clr-dark);
+    font-family: $header-fonts;
+    font-size: 1.8rem;
+    // box-shadow: inset -2px -2px 8px rgba(0, 0, 0, 0.4);
+    @include shadow-main();
 }
 
 .menu {
@@ -202,6 +250,7 @@ a {
     z-index: 1;
     transition: 200ms linear;
     transform-origin: top;
+    @include shadow-main;
 
     &__item {
         opacity: 1;
@@ -261,7 +310,8 @@ a {
 }
 
 .article {
-    padding: 0 0 1rem;
+    @include content;
+
     &-columns {
         margin-top: 0;
 
@@ -280,7 +330,7 @@ button,
 input,
 textarea,
 a {
-    border-radius: 4px;
+    border-radius: $radius-inner;
     margin: 4px 0 1em;
     border: none;
     padding: 4px;
@@ -293,12 +343,18 @@ a {
     }
 }
 
+input,
+textarea {
+    background: var(--clr-input-bg);
+}
+
 .contact {
     &__group {
+        @include content;
         display: flex;
         flex-direction: column;
         padding: 5%;
-        border-radius: 5px;
+        // border-radius: $radius-inner;
     }
     &__submit {
         text-decoration: none;
@@ -309,17 +365,19 @@ a {
 
 .post-template {
     &__content {
-        margin: 1em 0;
-        padding: 1em;
-        background: linear-gradient(#8883, #4443, #8883);
+        @include content;
+        // margin: 1em 0;
+        // padding: 1em;
+        // background: linear-gradient(#8883, #4443, #8883);
         // background-blend-mode: hue;
-        border-radius: 4px;
-        box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.2);
+        // border-radius: $radius-inner;
+        // box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.2);
 
         h1 {
             margin-bottom: 0.5em;
             font-weight: 900;
             border-bottom: 3px solid goldenrod;
+            font-family: $header-fonts;
         }
 
         ul {
@@ -338,7 +396,6 @@ a {
             background: inherit;
             margin: 1rem 0 0 1rem;
             padding: 0;
-            border-radius: 0;
             &:hover {
                 border-bottom: 2px solid var(--clr-h-light);
             }
@@ -351,22 +408,12 @@ a {
 
 .blog {
     &__entry {
-        margin-bottom: 1em;
-        padding: 0.5em;
-        box-shadow: 5px 8px 10px 5px var(--clr-shadow);
-        border-radius: 8px;
+        @include content;
+
         &__link {
             @include link;
         }
     }
-}
-
-@mixin shadow-main {
-    box-shadow: 5px 8px 10px 5px var(--clr-shadow);
-}
-
-.shadow {
-    @include shadow-main;
 }
 
 .show {
@@ -413,12 +460,13 @@ a {
 }
 
 .front-article {
-    margin: 1em 0;
-    padding: 1em;
-    background: linear-gradient(#8883, #4443, #8883);
+    @include content;
+    margin: 0 0 1em;
+
     // background-blend-mode: hue;
-    border-radius: 4px;
-    box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.2);
+    // border-radius: $radius-inner;
+    // box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.2);
+
     &__title {
         margin-bottom: 0.5em;
         font-weight: 900;
@@ -451,7 +499,6 @@ a {
             background: inherit;
             margin: 1rem 0 0 1rem;
             padding: 0;
-            border-radius: 0;
             &:hover {
                 border-bottom: 2px solid var(--clr-h-light);
             }
@@ -473,7 +520,7 @@ a {
         flex-direction: column;
         height: fit-content;
         width: 10rem;
-        border-radius: 4px 0 0 4px;
+        border-radius: $radius-inner 0 0 $radius-inner;
         font-size: 1.7rem;
         opacity: 0.8;
         &__item {
