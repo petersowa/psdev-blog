@@ -7,24 +7,24 @@ author: "devspeter"
 ---
 
 
-# Developer Links
+# Awesome resources for web development
 
-- Articles
+- ### Articles
 	- [RegEx Tool - IHateRegex](https://ihateregex.io/)
-	- [Dev.to: Top websites to find a remote programming job in 2020](https://dev.to/fredmaiaarantes/top-websites-to-find-a-remote-programming-job-in-2020-4b54)
+	- [Webworkers in React using Comlink](https://blog.logrocket.com/integrating-web-workers-in-a-react-app-with-comlink/)
 
-- Resource Sites
+- ### Resource Sites
 	- [Icons for websites - iconfinder.com](https://www.iconfinder.com/)
 
-- Cheatsheets
+- ### Cheatsheets
 	- [Markdown Cheatsheet - github resource](https://gist.github.com/jonschlinkert/5854601)
 
-- Web Tools
+- ### Web Design Tools
 	- [Color Theme Generator - mycolor.space](https://mycolor.space/)
 
-- CSS Articles
+- ### CSS Articles
 	- [Full Width Containers in Limited Width Parents](https://css-tricks.com/full-width-containers-limited-width-parents/)
 
-- Jobs
-	- [Webworkers in React using Comlink](https://blog.logrocket.com/integrating-web-workers-in-a-react-app-with-comlink/)
+- ### Jobs
+	- [Dev.to: Top websites to find a remote programming job in 2020](https://dev.to/fredmaiaarantes/top-websites-to-find-a-remote-programming-job-in-2020-4b54)
 
