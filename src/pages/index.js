@@ -104,7 +104,7 @@ const IndexPage = () => {
 
             <section>
                 {data.allContentfulBlogPosts.edges.map(({ node }) => (
-                    <Post post={node}></Post>
+                    <Post post={node} key={node.id}></Post>
                 ))}
             </section>
 

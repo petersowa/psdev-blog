@@ -27,7 +27,8 @@ $text-fonts: 'Alegreya Sans', 'Raleway', 'Source Sans Pro', 'Montserrat',
 $title-fonts: 'Coda', 'Audiowide', 'Frank Ruhl Libre', serif;
 
 @mixin shadow-main {
-    box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.1);
+    // box-shadow: none;
 }
 
 @mixin content {
@@ -340,7 +341,8 @@ a {
     margin: 4px 0 1em;
     border: none;
     padding: 4px;
-    &:focus {
+    &:focus,
+    &:hover {
         box-shadow: 0 0 0px 2px var(--clr-nav-active),
             0 0 0px 4px var(--clr-nav-outline);
     }
