@@ -19,6 +19,7 @@
 }
 
 $radius-inner: 4px;
+$radius-outer: 6px;
 $background-gradient: linear-gradient(#8883, #4443, #8883);
 $header-fonts: 'Coda', 'Frank Ruhl Libre', serif;
 $text-fonts: 'Alegreya Sans', 'Raleway', 'Source Sans Pro', 'Montserrat',
@@ -48,6 +49,8 @@ html {
 body {
     color: var(--clr-light);
     line-height: 1.5;
+    background: var(--clr-sidebar);
+
     // font-size: 100%;
 }
 
@@ -89,12 +92,15 @@ h2 {
         padding: 0.5em 0.5em;
         // border-radius: $radius-inner;
         background: var(--clr-main);
+        margin: 1.5em 0;
+        height: 100%;
+        border-radius: 5px;
     }
 
     &__body {
         display: flex;
         flex-grow: 1;
-        flex-direction: row;
+        flex-direction: $radius-outer;
     }
 
     &__footer {
@@ -127,7 +133,7 @@ h2 {
     padding: 0.2em 0;
     width: 100%;
     font-family: $header-fonts;
-    outline: 1px solid red;
+    // outline: 1px solid red;
     align-items: center;
     // height: 10rem;
     // justify-content: center;
@@ -137,7 +143,7 @@ h2 {
         flex-direction: row;
         align-items: center;
         width: fit-content;
-        margin: 0 0 0.4em;
+        margin: 0 0 0 0.4em;
         @include link-hover;
     }
 
@@ -273,7 +279,7 @@ h2 {
         position: fixed;
         margin: 0;
         right: 1em;
-        top: 1.2em;
+        top: 0.8em;
         background: var(--clr-light);
         z-index: 1;
         width: 1.8em;
