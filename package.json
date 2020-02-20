@@ -5,6 +5,7 @@
   "version": "0.2.0",
   "author": "Peter Sowa <devspeter@granitecode.com>",
   "dependencies": {
+    "@mdx-js/react": "^1.5.5",
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.2.41",
     "gatsby-plugin-create-client-paths": "^2.1.22",
@@ -23,7 +24,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.3.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
