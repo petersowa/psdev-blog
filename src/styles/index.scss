@@ -574,11 +574,12 @@ textarea {
             // background: var(--clr-article);
             border-radius: $radius-inner;
             padding: 0.4em;
+            @include shadow-main;
             th {
                 padding: 0.4em;
-                background: var(--clr-sidebar);
+                // background: var(--clr-sidebar);
                 text-align: left;
-                border-radius: $radius-inner;
+                // border-radius: $radius-inner;
             }
             tr {
                 height: 30px;
