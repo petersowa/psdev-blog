@@ -17,7 +17,7 @@ export default ({ data }) => {
                 className="post-template__content"
                 dangerouslySetInnerHTML={{ __html: post.html }}
             />
-            <hr />
+            {/* <hr /> */}
             <h4 className="post-template__citation">
                 Posted by {post.frontmatter.author} on {post.frontmatter.date}
             </h4>
