@@ -563,9 +563,10 @@ textarea {
         a {
             position: relative;
             background: inherit;
-            margin: 1rem 0 0 0;
+            // margin: 1rem 0 0 0;
             // padding: 0;
             // color: red;
+            margin: 0;
             @include hover-line;
         }
     }
