@@ -2,7 +2,7 @@
 
 :root {
     --clr-dark: hsl(205, 50%, 19%);
-    --clr-mid: hsl(205, 90%, 30%);
+    --clr-mid: hsl(205, 90%, 40%);
     --clr-h-light: hsl(227, 100%, 98%);
     --clr-light: hsl(25, 88%, 95%);
     --clr-menu-link: hsl(224, 89%, 38%);
@@ -14,7 +14,7 @@
     --clr-nav-active: hsl(205, 50%, 29%);
     --clr-nav-outline: hsl(35, 90%, 80%);
     --clr-bg-text: hsl(205, 30%, 30%);
-    --clr-content-bg: hsl(205, 50%, 15%);
+    --clr-content-bg: hsl(205, 50%, 20%);
     --clr-input-bg: hsl(55, 30%, 90%);
 }
 
@@ -558,16 +558,34 @@ textarea {
 
         li {
             margin-bottom: 0.2em;
+            min-height: 48px;
         }
 
         a {
             position: relative;
             background: inherit;
-            // margin: 1rem 0 0 0;
-            // padding: 0;
-            // color: red;
-            margin: 0;
             @include hover-line;
+        }
+
+        table {
+            height: auto;
+            font-size: 1.2rem;
+            width: 100%;
+            // background: var(--clr-article);
+            border-radius: $radius-inner;
+            padding: 0.4em;
+            th {
+                padding: 0.4em;
+                background: var(--clr-sidebar);
+                text-align: left;
+                border-radius: $radius-inner;
+            }
+            tr {
+                height: 30px;
+                td {
+                    padding: 0.4em;
+                }
+            }
         }
     }
 }
