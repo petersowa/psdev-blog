@@ -407,14 +407,12 @@ a {
     margin: 4px 0 1em;
     border: none;
     padding: 4px;
-    &::-moz-focus-inner {
+    &:-moz-focus-inner {
         border: none;
         outline: none;
     }
     &:active,
     &:focus {
-        border: none;
-        outline: none;
         box-shadow: 0 0 0px 2px var(--clr-nav-outline);
     }
 }
