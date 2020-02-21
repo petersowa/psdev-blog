@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+import Webview from '../components/Webview';
+
 const AboutMD = `I am a UI/UX web developer with experience building mobile ready, response web sites.  I am working in the financial industry helping to improve web UI/UX and integrate third party payment and support applications.  I've worked mostly with Front End development but also helped develop and support a Node Express.JS based backend to provide an API for storing and retrieving client secure information.  The API was built, tested, and deployed on Pivotal Cloud Foundry.
 
 Experienced working with: React.JS, Node, ExpressJS, HTML, CSS, SASS, JavaScript, Typescript, jQuery, Webpack, Grunt, Jenkins, Pivotal Cloud Foundry.
@@ -28,6 +30,8 @@ const AboutPage = () => {
             <article className="article article-columns">
                 <ReactMarkdown source={AboutMD} />
             </article>
+            <Webview source="https://firetodo.devspeter.space" />
+            <Webview source="https://codepen.io/petersowa/pen/pYKbQa" />
         </Layout>
     );
 };

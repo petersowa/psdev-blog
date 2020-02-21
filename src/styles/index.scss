@@ -590,6 +590,21 @@ textarea {
     }
 }
 
+.webview {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    border: 1px solid black;
+    padding: 10px;
+    @include shadow-main;
+}
+
+.webview__iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 480px) {
     .layout__body {
         flex-direction: column;
