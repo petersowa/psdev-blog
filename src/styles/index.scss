@@ -38,6 +38,7 @@ $title-fonts: 'Coda', 'Audiowide', 'Frank Ruhl Libre', serif;
     margin-bottom: 1em;
     padding: 1em 1em;
     border-radius: $radius-inner;
+    opacity: 0.9;
     @include shadow-main;
 }
 
@@ -208,7 +209,9 @@ h2 {
         // border: 2px solid black;
         padding: 0.5em 0.5em;
         // border-radius: $radius-inner;
-        background: var(--clr-main);
+        background: url('../images/closeup-photo-of-black-and-blue-keyboard-1194713.jpg')
+            no-repeat center center fixed;
+        background-size: cover;
         margin: 1.5em 0;
         height: 100%;
         border-radius: 5px;
