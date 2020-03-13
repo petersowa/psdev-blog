@@ -5,6 +5,8 @@ import SEO from '../components/seo';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
+import Webview from '../components/Webview';
+
 // import starsImage from '../images/astronomy-stars.jpg';
 
 function DelayShow({ children }) {
@@ -99,6 +101,7 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
+
             <h1 className="heading">Latest News</h1>
             {/* <OverflowImage fluid={data.file.childImageSharp.fluid} /> */}
 
@@ -114,3 +117,6 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+// <h1 className="heading">Stackblitz Project</h1>
+//             <Webview source="https://stackblitz.com/edit/year-date-page?embed=1&file=index.js" />
