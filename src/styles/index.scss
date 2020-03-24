@@ -205,7 +205,7 @@ h2 {
         // @include content;
         flex-grow: 2;
         flex-basis: 100%;
-        max-width: 60rem;
+        max-width: 100%;
         // border: 2px solid black;
         padding: 0.5em 0.5em;
         // border-radius: $radius-inner;
@@ -568,6 +568,13 @@ textarea {
             position: relative;
             background: inherit;
             @include hover-line;
+        }
+
+        pre {
+            outline: 2px solid #fff3;
+            font-size: 90%;
+            padding: 0.5em;
+            overflow: auto;
         }
 
         table {
