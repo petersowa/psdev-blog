@@ -3,7 +3,11 @@ import React from 'react';
 
 const Webview = ({ source }) => (
     <div className="webview">
-        <iframe className="webview__iframe" src={source}></iframe>
+        <iframe
+            className="webview__iframe"
+            src={source}
+            title="webview"
+        ></iframe>
     </div>
 );
 

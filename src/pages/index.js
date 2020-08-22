@@ -112,6 +112,12 @@ const IndexPage = () => {
             </section>
 
             <Link to="/app/random2">Random Link</Link>
+            <a
+                href="https://salty-fjord-22750.herokuapp.com/"
+                alt="Finance App"
+            >
+                Finance App
+            </a>
         </Layout>
     );
 };
