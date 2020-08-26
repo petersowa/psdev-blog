@@ -30,8 +30,6 @@ const AboutPage = () => {
             <article className="article article-columns">
                 <ReactMarkdown source={AboutMD} />
             </article>
-            <Webview source="https://firetodo.devspeter.space" />
-            <Webview source="https://codepen.io/petersowa/pen/pYKbQa" />
         </Layout>
     );
 };
