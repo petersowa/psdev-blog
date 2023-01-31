@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Img from 'gatsby-image';
+import Img from 'gatsby-plugin-image';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Webview from '../components/Webview';
