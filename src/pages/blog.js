@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 // import { css } from "@emotion/core"
 // import { rhythm } from "../utils/typography"
 import Layout from '../components/layout';
 
-export default ({ data }) => {
+const BlogPage = ({ data }) => {
     return (
         <Layout>
-            <SEO title="Blog" />
+            <Seo title="Blog" />
             <div className="blog">
                 <h1 className="blog__heading heading">
                     {data.allMarkdownRemark.totalCount} Posts
@@ -35,10 +35,12 @@ export default ({ data }) => {
     );
 };
 
+export default BlogPage;
+
 export const query = graphql`
     query {
         allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
+            sort: { frontmatter: { date: DESC } }
             filter: { fileAbsolutePath: { ne: null } }
         ) {
             totalCount

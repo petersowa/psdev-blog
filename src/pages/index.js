@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Img from 'gatsby-plugin-image';
+import Seo from '../components/seo';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Webview from '../components/Webview';
@@ -30,11 +30,11 @@ function DelayShow({ children }) {
 function OverflowImage({ fluid }) {
     return (
         <DelayShow>
-            <Img
+            <GatsbyImage
                 className="cover-image"
                 fluid={fluid}
                 alt="milkyway on horizon"
-            ></Img>
+            ></GatsbyImage>
         </DelayShow>
     );
 }
@@ -76,7 +76,7 @@ const IndexPage = () => {
                 }
             }
 
-            allContentfulBlogPosts(sort: { fields: [updatedAt], order: DESC }) {
+            allContentfulBlogPosts(sort: { updatedAt: DESC }) {
                 edges {
                     node {
                         id
@@ -100,7 +100,7 @@ const IndexPage = () => {
 
     return (
         <Layout>
-            <SEO title="Home" />
+            <Seo title="Home" />
 
             <h1 className="heading">Latest News</h1>
             {/* <OverflowImage fluid={data.file.childImageSharp.fluid} /> */}
@@ -118,11 +118,10 @@ const IndexPage = () => {
             >
                 Finance App
             </a>
+            {/* <h1 className="heading">Stackblitz Project</h1> */}
+            {/* <Webview source="https://stackblitz.com/edit/year-date-page?embed=1&file=index.js" /> */}
         </Layout>
     );
 };
 
 export default IndexPage;
-
-// <h1 className="heading">Stackblitz Project</h1>
-//             <Webview source="https://stackblitz.com/edit/year-date-page?embed=1&file=index.js" />
