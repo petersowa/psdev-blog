@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-export default ({ data }) => {
+export default function PostView({ data }) {
     const post = data.markdownRemark;
     return (
         <Layout className="post-template">
@@ -26,7 +26,7 @@ export default ({ data }) => {
             </Link>
         </Layout>
     );
-};
+}
 
 export const postQuery = graphql`
     query BlogPostByPath($slug: String!) {
